@@ -113,7 +113,7 @@ if (isset($rss)) {
     </div>
 <?php } ?>
 <?php } ?>
-<div class="row justify-content-evenly">
+<div class="row justify-content-evenly m-0 p-0">
     <?php
     if (isset($_SESSION['USER']) && isset($_COOKIE['myCheckbox0'])) {
         if (isset($_COOKIE['myView']) && !empty($_COOKIE['myView'])) {
@@ -263,20 +263,6 @@ if (isset($rss)) {
             <!-- Fin Modal -->
     <?php }
     } ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
 

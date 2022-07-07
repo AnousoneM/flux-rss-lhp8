@@ -5,7 +5,8 @@ session_start();
 // Require du Controller respectif
 require_once "../controller/login-controller.php";
 ?>
-<?php include ("../inc/header.php");?>
+<?php include("../inc/header.php"); ?>
+
 <body class="d-flex flex-column min-vh-100 log">
     <!-- Formulaire de connexion -->
     <form action="" method="POST">
@@ -24,10 +25,11 @@ require_once "../controller/login-controller.php";
                     <br>
                     <input type="password" id="password" name="password">
                 </div>
-                <div class="mt-4">
+                <!-- Déploiemenent à venir -->
+                <!-- <div class="mt-4">
                     <input type="checkbox" id="stayConnected" name="stayConnected">
                     <label for="stayConnected">Rester connecté</label>
-                </div>
+                </div> -->
                 <button class="btn btn-dark my-3">Connexion</button>
                 <div class="text-center">
                     <a class="text-decoration-none text-secondary" href="home.php">Retour <i class="bi bi-house-heart-fill"></i> Accueil</a>
