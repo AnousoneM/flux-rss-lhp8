@@ -25,8 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         setcookie("whiteTheme", '', time() - 3600);
     }
+    
     // refresh de la page à l'aide d'un header location
     header('Location: ../views/settings.php');
-    // nous controllons si la checkbox valentineTheme est coché
 
 }

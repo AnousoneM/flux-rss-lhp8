@@ -1,10 +1,9 @@
 <?php
 session_start();
-// var_dump($_COOKIE['myView']);
-// var_dump($_COOKIE['myCheckbox0']);
-// var_dump($_COOKIE['myCheckbox1']);
-// var_dump($_COOKIE['myCheckbox2']);
+
 require_once '../controller/settings-controller.php';
+require_once '../helpers/helpers.php';
+
 ?>
 <?php include '../inc/header.php' ?>
 <div class="row justify-content-center m-0 p-0">
@@ -16,25 +15,25 @@ require_once '../controller/settings-controller.php';
                 <fieldset>
                     <legend>Type de recherche :</legend>
                     <div>
-                        <input class="myCheckbox" type="checkbox" id="PS5" name="myCheckbox[]" value="ps5" <?= isset($_COOKIE['myCheckbox']) ? ($_COOKIE['myCheckbox'] == 'ps5' ? 'checked' : '') : '' ?>>
+                        <input class="myCheckbox" type="checkbox" id="PS5" name="myCheckbox[]" value="ps5" <?= setCheckbox('ps5', 'myCheckbox', 'checked') ?>>
                         <label class="ms-2" for="PS5">PS5</label>
                     </div>
 
                     <div>
-                        <input class="myCheckbox" type="checkbox" id="Switch" name="myCheckbox[]" value="switch" <?= isset($_COOKIE['myCheckbox']) ? ($_COOKIE['myCheckbox'] == 'switch' ? 'checked' : '') : '' ?>>
+                        <input class="myCheckbox" type="checkbox" id="Switch" name="myCheckbox[]" value="switch" <?= setCheckbox('switch', 'myCheckbox', 'checked') ?>>
                         <label class="ms-2" for="Switch">Switch</label>
                     </div>
 
                     <div>
-                        <input class="myCheckbox" type="checkbox" id="Wii" name="myCheckbox[]" value="wii" <?= isset($_COOKIE['myCheckbox']) ? ($_COOKIE['myCheckbox'] == 'wii' ? 'checked' : '') : '' ?>>
+                        <input class="myCheckbox" type="checkbox" id="Wii" name="myCheckbox[]" value="wii" <?= setCheckbox('wii', 'myCheckbox', 'checked') ?>>
                         <label class="ms-2" for="Wii">Wii</label>
                     </div>
                     <div>
-                        <input class="myCheckbox" type="checkbox" id="PC" name="myCheckbox[]" value="pc" <?= isset($_COOKIE['myCheckbox']) ? ($_COOKIE['myCheckbox'] == 'pc' ? 'checked' : '') : '' ?>>
+                        <input class="myCheckbox" type="checkbox" id="PC" name="myCheckbox[]" value="pc" <?= setCheckbox('pc', 'myCheckbox', '') ?>>
                         <label class="ms-2" for="PC">PC</label>
                     </div>
                     <div>
-                        <input class="myCheckbox" type="checkbox" id="Mobile" name="myCheckbox[]" value="mobile" <?= isset($_COOKIE['myCheckbox']) ? ($_COOKIE['myCheckbox'] == 'mobile' ? 'checked' : '') : '' ?>>
+                        <input class="myCheckbox" type="checkbox" id="Mobile" name="myCheckbox[]" value="mobile" <?= setCheckbox('mobile', 'myCheckbox', '') ?>>
                         <label class="ms-2" for="Mobile">Mobile</label>
                     </div>
                 </fieldset>
@@ -72,7 +71,6 @@ require_once '../controller/settings-controller.php';
 
                 </fieldset>
             </div>
-
 
 
             <!-- bouton permettant de valider le formulaire -->
